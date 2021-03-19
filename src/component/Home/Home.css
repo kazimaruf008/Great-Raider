@@ -1,0 +1,10 @@
+.home-bg{
+    background:url(../images/Bg.png) no-repeat;
+    background-size: cover;
+}
+img{
+    width: 100%;
+}
+.card{
+    background-color: white;
+}

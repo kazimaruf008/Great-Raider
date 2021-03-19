@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import'./Login.css'
 import { useHistory, useLocation } from "react-router";
+import { Link } from "react-router-dom";
 
 
 if (!firebase.apps.length) {
@@ -110,22 +111,45 @@ function Login() {
   
   }
   return (
-    <div>
-      <div className="mt-5">
-        <form action="" onSubmit={handleSineIn} className="text-center">
-          <h2>Create An Account</h2>
-          <input type="text" name="name" placeholder="Name" required onBlur={handleBlur}/> <br/><br/>
-          <input type="text" name="email" placeholder="user name or email" required onBlur={handleBlur}/> <br/><br/>
-          <input type='password' name="password" placeholder="password" required onBlur={handleBlur}/> <br/><br/>
-          <input type="password" name="retype-password" placeholder="retype password" required/><br/><br/>
-          <button>Sine In</button><br/><br/>
-        </form>
+    <div class="main">
+      <section className="signup">
+      <div className="container">
+          <div className="signup-content">
+              <form method="POST" id="signup-form" className="signup-form" onSubmit={handleSineIn}>
+                  <h2 className="form-title">Create account</h2>
+                  <div className="form-group">
+                      <input type="text" className="form-input" name="name" id="name" placeholder="Your Name"  onBlur={handleBlur} required/>
+                  </div>
+                  <div className="form-group">
+                      <input type="email" className="form-input" name="email" id="email" placeholder="Your Email"  onBlur={handleBlur} required/>
+                  </div>
+                  <div className="form-group">
+                      <input type="password" className="form-input" name="password" id="password" placeholder="Password"  onBlur={handleBlur} required/>
+                      <span toggle="#password" className="zmdi zmdi-eye field-icon toggle-password"></span>
+                  </div>
+                  <div className="form-group">
+                      <input type="password" className="form-input" name="re_password" id="re_password" placeholder="Repeat your password"  onBlur={handleBlur} required/>
+                  </div>
+                  <div className="form-group">
+                      <input type="checkbox" name="agree-term" id="agree-term" className="agree-term" />
+                      <label htmlFor="agree-term" className="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" className="term-service">Terms of service</a></label>
+                  </div>
+                  <div className="form-group">
+                      <button type="submit" name="submit" id="submit" className="form-submit" value="Sign up">Sine In</button>
+                  </div>
+              </form>
+              <p className="loginhere">
+                  Have already an account ? <Link to="/login-user" className="loginhere-link">Login here</Link>
+              </p>
+              <div class="d-flex justify-content-center">
+                <button className="mr-3" onClick={handleGoogleSineIn}>sine in with google <FontAwesomeIcon icon={faGoogle}/></button>
+                <button onClick={handleFacebookSineIn}>sine in with facebook <FontAwesomeIcon icon={faFacebook}/></button>
+              </div>
+          </div>
+          
       </div>
-      <div className="text-center">
-        <button onClick={handleGoogleSineIn}>sine in with google <FontAwesomeIcon icon={faGoogle}/></button> <br/><br/>
-        <button onClick={handleFacebookSineIn}>sine in with facebook <FontAwesomeIcon icon={faFacebook}/></button>
-      </div>
-    </div>
+  </section>
+</div>  
   );
 }
 
@@ -151,3 +175,6 @@ export default Login;
         {/* <p>{user.error}</p> */}
     //   </div>
     // </div> */}
+
+    
+    

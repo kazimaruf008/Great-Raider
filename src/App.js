@@ -16,6 +16,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.min"
 import { createContext } from 'react';
 import { useState } from 'react';
 import PrivetRoute from './component/privetRoute/PrivetRoute';
+import LoginUser from './component/Login/LoginUser';
 
 export const UserContext = createContext();
 
@@ -30,17 +31,20 @@ function App(props) {
           <Route exact path="/home">
             <Home></Home>
           </Route>
-          <PrivetRoute path="/destination">
+          <Route path="/destination/:name">
             <Destination></Destination>
-          </PrivetRoute>
-          <PrivetRoute path="/blog">
+          </Route>
+          <Route path="/blog">
             <Blog></Blog>
-          </PrivetRoute>
+          </Route>
           <PrivetRoute path="/contact">
             <Contact></Contact>
           </PrivetRoute>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="/login-user">
+            <LoginUser></LoginUser>
           </Route>
           <Route path="/">
             <Home></Home>
