@@ -4,7 +4,7 @@ import { UserContext } from '../../App';
 
 
 const PrivetRoute = ({children, ...rest}) => {
-    const [loginUser, setLoginUser] = useContext(UserContext)
+    const [loginUser] = useContext(UserContext)
     return (
         <Route
       {...rest}
