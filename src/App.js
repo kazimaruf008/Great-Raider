@@ -6,17 +6,16 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Login from './component/Login/Login';
 import Blog from './component/Blog/Blog'
 import Contact from './component/Contact/Contact'
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import "../node_modules/bootstrap/dist/js/bootstrap.min"
 import { createContext } from 'react';
 import { useState } from 'react';
 import PrivetRoute from './component/privetRoute/PrivetRoute';
 import LoginUser from './component/Login/LoginUser';
+import"../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import"../node_modules/bootstrap/dist/js/bootstrap.bundle"
 
 export const UserContext = createContext();
 
@@ -34,16 +33,16 @@ function App(props) {
           <Route path="/destination/:name">
             <Destination></Destination>
           </Route>
-          <Route path="/blog">
+          <Route path="/blog" exact>
             <Blog></Blog>
           </Route>
-          <PrivetRoute path="/contact">
+          <PrivetRoute path="/contact" exact>
             <Contact></Contact>
           </PrivetRoute>
-          <Route path="/login">
+          <Route path="/login" exact>
             <Login></Login>
           </Route>
-          <Route path="/login-user">
+          <Route path="/login-user" exact>
             <LoginUser></LoginUser>
           </Route>
           <Route path="/">

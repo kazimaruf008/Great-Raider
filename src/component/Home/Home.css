@@ -1,10 +1,19 @@
 .home-bg{
-    background:url(../images/Bg.png) no-repeat;
+    background:url(../images/Bg.png);
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+
 }
 img{
     width: 100%;
 }
 .card{
     background-color: white;
+}
+.container-hight{
+}
+.body{
+    padding: 210px;
 }

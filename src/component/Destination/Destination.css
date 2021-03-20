@@ -1,0 +1,29 @@
+.img-container{
+    width : 50px;
+}
+.img-container img{
+    width: 100%;
+}
+.btn-padding{
+    padding: 5px 68px;
+    border-radius: 8px;
+}
+.pick{
+    margin-bottom: 0px;
+}
+.pick-form{
+    background: #f1f1f1;
+    padding: 50px 0px;
+    border-radius: 20px;
+}
+.all-card{
+    background: #f1f1f1;
+    color: rgba(0, 0, 0, 0.384);
+    padding-top: 50px;
+    border-radius: 20px;
+    display: none;
+}
+.btn-close {
+    padding: 5px 108px;
+    border-radius: 8px;
+}

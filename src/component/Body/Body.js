@@ -8,7 +8,7 @@ const Body = (props) => {
             <div className="p-3">
                 <img src={img} alt="ok"/>
             </div>
-             <h3><Link className="nav-link" to={`/destination/${name, img}`}>{name}</Link></h3>
+             <h3><Link className="nav-link" to={`/destination/${name}`}>{name}</Link></h3>
         </div>
     );
 };
