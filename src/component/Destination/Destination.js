@@ -75,7 +75,7 @@ const Destination = () => {
                     </div>
                </div>
                <div className="col-md-9">
-                   {/* <SimpleMap></SimpleMap> */}
+                   <SimpleMap></SimpleMap>
                </div>
            </div>
         </div>

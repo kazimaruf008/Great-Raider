@@ -30,9 +30,9 @@ function App(props) {
           <Route exact path="/home">
             <Home></Home>
           </Route>
-          <Route path="/destination/:name">
+          <PrivetRoute path="/destination/:name">
             <Destination></Destination>
-          </Route>
+          </PrivetRoute>
           <Route path="/blog" exact>
             <Blog></Blog>
           </Route>
