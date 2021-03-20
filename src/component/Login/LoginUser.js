@@ -20,7 +20,7 @@ const LoginUser = () => {
                         </div>
                         <div className="form-group">
                             
-                            <label for="agree-term" className="label-agree-term"><span></span><a href="#" className="term-service">Forgotten password?</a></label>
+                            <label for="agree-term" className="label-agree-term"><span></span><a href="/" className="term-service">Forgotten password?</a></label>
                         </div>
                         <div className="form-group">
                             <input type="submit" name="submit" id="submit" className="form-submit" value="Sign In"/>
