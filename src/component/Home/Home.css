@@ -1,19 +1,29 @@
 .home-bg{
-    background:url(../images/Bg.png);
-    height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+  background: url('../images/Bg1.png');
+  min-height: 100%; 
+  min-width: 100%;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+@media (min-width: 768px)
+{.home-bg {
+    /* position: absolute; */
+}}
+
+
 img{
     width: 100%;
 }
 .card{
     background-color: white;
 }
-.container-hight{
+.component {
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
 }
-.body{
-    padding: 210px;
+.m-t{
+    margin-top: 12rem!important;
 }

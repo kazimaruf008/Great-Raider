@@ -14,8 +14,7 @@ import { createContext } from 'react';
 import { useState } from 'react';
 import PrivetRoute from './component/privetRoute/PrivetRoute';
 import LoginUser from './component/Login/LoginUser';
-import"../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import"../node_modules/bootstrap/dist/js/bootstrap.bundle"
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min"
 
 export const UserContext = createContext();
 
@@ -23,9 +22,8 @@ function App(props) {
   const [loginUser, setLoginUser] = useState({})
   return (
     <UserContext.Provider value = {[loginUser, setLoginUser]}>
-      
       <Router>
-      <Header></Header>
+      <Header loginUser = {loginUser}></Header>
         <Switch>
           <Route exact path="/home">
             <Home></Home>
@@ -33,9 +31,9 @@ function App(props) {
           <PrivetRoute path="/destination/:name">
             <Destination></Destination>
           </PrivetRoute>
-          <Route path="/blog" exact>
+          <PrivetRoute path="/blog" exact>
             <Blog></Blog>
-          </Route>
+          </PrivetRoute>
           <PrivetRoute path="/contact" exact>
             <Contact></Contact>
           </PrivetRoute>

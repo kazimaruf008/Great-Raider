@@ -107,11 +107,9 @@ function Login() {
     var email = error.email;
     var credential = error.credential;
   });
-
-  
   }
   return (
-    <div class="main">
+    <div className="main">
       <section className="signup">
       <div className="container">
           <div className="signup-content">
@@ -141,7 +139,7 @@ function Login() {
               <p className="loginhere">
                   Have already an account ? <Link to="/login-user" className="loginhere-link">Login here</Link>
               </p>
-              <div class="d-flex justify-content-center">
+              <div className="d-flex justify-content-center">
                 <button className="mr-3" onClick={handleGoogleSineIn}>sine in with google <FontAwesomeIcon icon={faGoogle}/></button>
                 <button onClick={handleFacebookSineIn}>sine in with facebook <FontAwesomeIcon icon={faFacebook}/></button>
               </div>
@@ -154,27 +152,6 @@ function Login() {
 }
 
 export default Login;
-
-
-{/* <div className="d-flex justify-content-center">
-      <div className="form">
-        <div className="">
-          <form onSubmit={handleSineIn} className="text-center">
-            <input type="text" name="name" required onBlur={handleBlur}/><br/><br/>
-            <input type="text" name="email" onBlur={handleBlur} placeholder="email" required/><br/><br/>
-
-            <input type="password" name="password" onBlur={handleBlur} placeholder="password" required/><br/><br/>
-
-            <input type="password" name="retype-password" placeholder="retype password" required/><br/><br/>
-
-            <button>Sine In</button><br/><br/>
-          </form>
-        </div>
-        <button onClick={handleGoogleSineIn}>sine in with google <FontAwesomeIcon icon={faGoogle}/></button> <br/><br/>
-        <button onClick={handleFacebookSineIn}>sine in with facebook <FontAwesomeIcon icon={faFacebook}/></button>
-        {/* <p>{user.error}</p> */}
-    //   </div>
-    // </div> */}
 
     
     

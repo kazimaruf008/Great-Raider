@@ -7,6 +7,9 @@
 .btn-padding{
     padding: 5px 68px;
     border-radius: 8px;
+    margin-bottom: -10px;
+    display: inline-block;
+    cursor: pointer;
 }
 .pick{
     margin-bottom: 0px;
@@ -26,4 +29,5 @@
 .btn-close {
     padding: 5px 108px;
     border-radius: 8px;
+    background-color: green;
 }

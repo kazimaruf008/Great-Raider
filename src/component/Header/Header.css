@@ -1,0 +1,12 @@
+.component {
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+}
+.name{
+    display: inline-block;
+    color:white;
+    margin-right: 20px;
+    padding:5px;
+    border-radius: 5px;
+}
