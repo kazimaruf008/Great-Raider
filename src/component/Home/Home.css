@@ -2,14 +2,13 @@
   background: url('../images/Bg1.png');
   min-height: 100%; 
   min-width: 100%;
-  position: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 @media (min-width: 768px)
 {.home-bg {
-    /* position: absolute; */
+    position: fixed;
 }}
 
 
